@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
         editTextChuteJogador = (EditText) findViewById(R.id.editTextChuteJogador);
         textViewUltimoChute = (TextView) findViewById(R.id.textViewUltimoChute);
         geradorNumero = new Random();
-        chuteAleatorio = geradorNumero.nextInt(5);
+        chuteAleatorio = geradorNumero.nextInt(10);
     }
 
     public void chutar(View view) {
@@ -35,6 +35,8 @@ public class MainActivity extends AppCompatActivity {
             Toast.makeText(this, "Insira o chute", Toast.LENGTH_SHORT).show();
             return;
         }
+
+        chuteJogador = Integer.parseInt(editTextChuteJogador.getText().toString());
 
         if (chuteJogador < chuteAleatorio){
             Toast.makeText(this, "Chute é menor", Toast.LENGTH_SHORT).show();
@@ -46,18 +48,10 @@ public class MainActivity extends AppCompatActivity {
             return;
         }
 
-        if (chuteJogador == chuteAleatorio){
-            Toast.makeText(this, "Acertou mizeravi", Toast.LENGTH_SHORT).show();
-            textViewUltimoChute.setText(editTextChuteJogador.getText().toString());
-            return;
-        }
-
-        chuteJogador = Integer.parseInt(editTextChuteJogador.getText().toString());
-
-        if (chuteJogador < chuteAleatorio) {
+           if (chuteJogador == chuteAleatorio) {
             AlertDialog.Builder alertDialog = new AlertDialog.Builder(this);
-            alertDialog.setTitle("Atenção");
-            alertDialog.setMessage("O chute deve ser maio que: " + editTextChuteJogador.getText().toString());
+            alertDialog.setTitle("Aeeeehhhhhhh");
+            alertDialog.setMessage("ACERTOU MIZERAVI.....!!!!!");
             alertDialog.setPositiveButton("OK", new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialog, int which) {
@@ -66,6 +60,7 @@ public class MainActivity extends AppCompatActivity {
             });
             alertDialog.create();
             alertDialog.show();
+            textViewUltimoChute.setText(editTextChuteJogador.getText().toString());
         }
     }
 }
