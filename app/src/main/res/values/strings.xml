@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">O adivinho Fiap</string>
+    <string name="imagem_do_adivinho">Imagem do adivinho</string>
+    <string name="ensira_o_chute">Informe seu chute</string>
+    <string name="ultimo_chute">Útimo chute</string>
+    <string name="chutar">Chutar</string>
+    <string name="title_activity_splash">SplashActivity</string>
+</resources>

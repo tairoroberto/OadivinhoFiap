@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="padding_default_16dp">16dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="dimen_16dp">8dp</dimen>
+    <dimen name="dimen_font_72sp">72sp</dimen>
+</resources>
